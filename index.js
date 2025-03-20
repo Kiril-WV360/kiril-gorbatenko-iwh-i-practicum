@@ -12,7 +12,7 @@ const client = axios.create({
     },
 });
 
-const retrieveCustomObjectItems = async (objId, properties) => client.post(
+const createCustomObjectItem = async (objId, properties) => client.post(
     `/crm/v3/objects/${ objId }`,
     {
         properties,
@@ -30,7 +30,7 @@ app.get('/update-cobj', (req, res) => {
 
 app.post('/update-cobj', async (req, res) => {
     try {
-        const data = await retrieveCustomObjectItems(
+        const data = await createCustomObjectItem(
             process.env.OBJECT,
             {
                 name: req.body.name,
