@@ -8,3 +8,21 @@ html
         h1 Create item
         div
             a(href="/") Return to the homepage
+        br
+        form(method="POST", action="/update-cobj")
+            label Name: 
+            input(name="name", required)
+            br
+            label Genre: 
+            input(name="genre", required)
+            br
+            label Paltforms: 
+            input(name="platforms[]", type="checkbox", value="PC", id="platforms-pc")
+            label(for="platforms-pc") &nbsp; PC &nbsp;
+            input(name="platforms[]", type="checkbox", value="PS5", id="platforms-ps5")
+            label(for="platforms-ps5") &nbsp; PS5 &nbsp;
+            input(name="platforms[]", type="checkbox", value="Xbox", id="platforms-xbox")
+            label(for="platforms-xbox") &nbsp; Xbox &nbsp;
+            br
+            br
+            input(type="submit", value="Submit")
