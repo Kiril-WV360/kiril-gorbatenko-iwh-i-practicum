@@ -9,3 +9,11 @@ body, * {
 h1 {
     margin-block: 1rem;
 }
+
+table tr:first-child td {
+    font-weight: bold;
+    background-color: #FACAD2;
+}
+table tr:not(:first-child) td {
+    border: 1px solid #000;
+}
