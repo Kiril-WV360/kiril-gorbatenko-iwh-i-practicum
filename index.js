@@ -35,7 +35,7 @@ app.post('/update-cobj', async (req, res) => {
             {
                 name: req.body.name,
                 genre: req.body.genre,
-                platforms: req.body.platforms,
+                platforms: req.body.platforms.join(';'),
             },
         );
     
